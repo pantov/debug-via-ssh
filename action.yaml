@@ -62,7 +62,7 @@ runs:
         elseif('${{ runner.os }}' -eq 'Windows')
         {
           printf "# Preparing environment..."
-            echo "ngrok-stable-windows-amd64.zip" > ngrok_zip_name
+            echo "ngrok-v3-stable-windows-amd64.zip" > ngrok_zip_name
             echo $env:UserName > ssh_user
           printf " [DONE]\n\n"
           
@@ -77,7 +77,7 @@ runs:
     - name: Install and setup ngrok
       run: |
         echo "# Install ngrok"
-          curl https://bin.equinox.io/c/4VmDzA7iaHb/$(cat ngrok_zip_name) --output ngrok.zip
+          curl https://bin.equinox.io/c/bNyj1mQVY4c/$(cat ngrok_zip_name) --output ngrok.zip
           unzip ngrok.zip
           chmod +x ./ngrok
 
